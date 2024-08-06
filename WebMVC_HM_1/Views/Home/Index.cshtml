@@ -1,0 +1,55 @@
+﻿@model WebMVC_HM_1.Models.SaveData
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    @using (Html.BeginForm("SaveTempData", "Home"))
+    {
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <p>TempData:</p>
+            </div>
+            <div class="col-2">
+                <input type="text" name="TempDataValue" value="@Model.TempDataValue" />
+            </div>
+            <div class="col-3">
+                <input type="submit" value="Save" />
+            </div>
+            <div class="col-6"></div>
+        </div>
+    }
+
+    @using (Html.BeginForm("SaveCookies", "Home"))
+    {
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <p>Cookies:</p>
+            </div>
+            <div class="col-2">
+                <input type="text" name="CookiesValue" value="@Model.CookiesValue" />
+            </div>
+            <div class="col-3">
+                <input type="submit" value="Save" />
+            </div>
+            <div class="col-6"></div>
+        </div>
+    }
+
+    @using (Html.BeginForm("SaveSession", "Home"))
+    {
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <p>Session:</p>
+            </div>
+            <div class="col-2">
+                <input type="text" name="SessionValue" value="@Model.SessionValue" />
+            </div>
+            <div class="col-3">
+                <input type="submit" value="Save" />
+            </div>
+            <div class="col-6"></div>
+        </div>
+    }
+</main>
